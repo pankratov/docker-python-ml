@@ -1,5 +1,6 @@
 FROM python:3.6.3-stretch
 MAINTAINER Vasilii Pankratov "pankratov.vs@gmail.com"
+LABEL basic
 
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install jupyter
