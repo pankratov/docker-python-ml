@@ -23,7 +23,12 @@ RUN python3 -m pip install --user scikit-learn
 
 # Add some deep learning tools
 RUN python3 -m pip install --user pillow
-RUN python3 -m pip install --user keras tensorflow seaborn plotly h5py imgaug
+RUN python3 -m pip install --user keras
+RUN python3 -m pip install --user tensorflow
+RUN python3 -m pip install --user seaborn
+RUN python3 -m pip install --user plotly
+RUN python3 -m pip install --user h5py
+RUN python3 -m pip install --user imgaug
 
 VOLUME /ws
 
