@@ -21,6 +21,10 @@ RUN python3 -m pip install --user pandas
 RUN python3 -m pip install --user scipy
 RUN python3 -m pip install --user scikit-learn
 
+# Add some deep learning tools
+RUN python3 -m pip install --user pillow
+RUN python3 -m pip install --user keras tensorflow seaborn plotly h5py imgaug
+
 VOLUME /ws
 
 ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--ip='*'", "--notebook-dir='/ws'"] 
