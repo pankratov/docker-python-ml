@@ -10,7 +10,9 @@ RUN apt install -y build-essential liblapack-dev libopenblas-dev libatlas-base-d
 
 RUN adduser --disabled-password --gecos "" mluser
 RUN mkdir /ws
-RUN chown mluser:mluser /ws
+RUN mkdir /data
+RUN chown -R mluser:mluser /ws
+RUN chown -R mluser:mluser /data
 
 USER mluser
 
@@ -21,6 +23,7 @@ RUN python3 -m pip install --user pandas
 RUN python3 -m pip install --user scipy
 RUN python3 -m pip install --user scikit-learn
 
+VOLUME /data
 VOLUME /ws
 
 ENTRYPOINT ["jupyter", "notebook", "--no-browser", "--ip='*'", "--notebook-dir='/ws'"] 
