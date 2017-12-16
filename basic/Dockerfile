@@ -23,7 +23,6 @@ RUN python3 -m pip install --user pandas
 RUN python3 -m pip install --user scipy
 RUN python3 -m pip install --user scikit-learn
 RUN python3 -m pip install --user xlrd
-RUN python3 -m pip install --user pymorphy2
 
 VOLUME /data
 VOLUME /ws
